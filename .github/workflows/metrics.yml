@@ -17,7 +17,8 @@ jobs:
         
       #Isocalendar
       - name: GitHub Metrics Isocalender
-        uses: lowlighter/metrics@latest
+        #uses: lowlighter/metrics@latest
+        uses: ephraaimwong/metrics@master 
         with:
           filename: github-metrics/metrics.plugin.isocalendar.svg #github-metrics/metrics.plugin.isocalendar.fullyear.svg
           token: ${{ secrets.METRICS_TOKEN }}
@@ -26,7 +27,8 @@ jobs:
           plugin_isocalendar: yes
           #Optional: Uncomment to show full year
           #plugin_isocalendar_duration: full-year
-          
+          plugin_isocalendar_title: no
+
           committer_message: "Chore: Update metrics isocalendar"
       
       #Another Action
