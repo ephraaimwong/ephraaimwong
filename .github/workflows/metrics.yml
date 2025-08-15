@@ -1,0 +1,20 @@
+name: Metrics Isocalendar
+
+on:
+  schedule:
+    - cron: "0 0 * * 1" # Runs every monday at 00:00 UTC
+  workflow_dispatch: # Allows manual triggering
+
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - name: GitHub Metrics Isocalender
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.plugin.isocalendar.svg #metrics.plugin.isocalendar.fullyear.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""  # Disable base content (e.g., no profile header)
+          plugin_isocalendar: yes
+          #Optional: Uncomment to show full year
+          #plugin_isocalendar_duration: full-year
