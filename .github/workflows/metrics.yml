@@ -2,7 +2,7 @@ name: Metrics
 
 on:
 # Schedule updates (every 4 hours)
-  schedule: [{cron: "0 */4 * * *"}]
+  schedule: [{cron: "*/15 * * * *"}]
   workflow_dispatch: # Allows manual triggering
   push: {branches: ["master", "main"]}
 
