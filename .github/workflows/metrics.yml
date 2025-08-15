@@ -27,7 +27,7 @@ jobs:
           plugin_isocalendar: yes
           #Optional: Uncomment to show full year
           #plugin_isocalendar_duration: full-year
-          plugin_isocalendar_title: no
+          # plugin_isocalendar_title: no
 
           committer_message: "Chore: Update metrics isocalendar"
       
