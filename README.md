@@ -1,5 +1,6 @@
 ## Hi there 👋
 
+![Metrics Isocalendar](./github-metrics/metrics.plugin.isocalendar.svg)
 <!--
 **ephraaimwong/ephraaimwong** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 

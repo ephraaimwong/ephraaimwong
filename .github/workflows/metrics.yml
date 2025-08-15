@@ -1,4 +1,4 @@
-name: Metrics Isocalendar
+name: Metrics
 
 on:
 # Schedule updates (each hour)
@@ -12,13 +12,19 @@ jobs:
     permissions:
       contents: write
     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        
+      #Isocalendar
       - name: GitHub Metrics Isocalender
         uses: lowlighter/metrics@latest
         with:
-          filename: metrics.plugin.isocalendar.svg #metrics.plugin.isocalendar.fullyear.svg
+          filename: github-metrics/metrics.plugin.isocalendar.svg #github-metrics/metrics.plugin.isocalendar.fullyear.svg
           token: ${{ secrets.METRICS_TOKEN }}
           base: ""  # Disable base content (e.g., no profile header)
           config_timezone: America/Chicago
           plugin_isocalendar: yes
           #Optional: Uncomment to show full year
           #plugin_isocalendar_duration: full-year
+      
+      #Another Action
