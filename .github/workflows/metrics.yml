@@ -1,8 +1,8 @@
 name: Metrics
 
 on:
-# Schedule updates (every 4 hours)
-  schedule: [{cron: "*/15 * * * *"}]
+# Schedule updates (every 4 hours and 3 minutes) odd cron to avoid overcrowding queues
+  schedule: [{cron: "3 */4 * * *"}]
   workflow_dispatch: # Allows manual triggering
   push: {branches: ["master", "main"]}
 
@@ -28,6 +28,7 @@ jobs:
           #Optional: Uncomment to show full year
           #plugin_isocalendar_duration: full-year
           # plugin_isocalendar_title: no
+          
 
           committer_message: "Chore: Update metrics isocalendar"
       
