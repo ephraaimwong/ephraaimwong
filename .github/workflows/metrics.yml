@@ -15,8 +15,8 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
         
-      #Isocalendar
-      - name: GitHub Metrics Isocalender
+      #Isocalendar Half Year
+      - name: GitHub Metrics Isocalender Half Year
         uses: lowlighter/metrics@latest
         # uses: ephraaimwong/metrics@master 
         with:
@@ -30,6 +30,21 @@ jobs:
           # plugin_isocalendar_title: no
           
 
+          committer_message: "Chore: Update metrics isocalendar"      
+      
+      #Isocalendar Full Year
+      - name: GitHub Metrics Isocalender Full Year
+        uses: lowlighter/metrics@latest
+        with:
+          filename: github-metrics/metrics.plugin.isocalendar.fullyear.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: ""  # Disable base content (e.g., no profile header)
+          config_timezone: America/Chicago
+          plugin_isocalendar: yes
+          #Optional: Uncomment to show full year
+          plugin_isocalendar_duration: full-year
+          
           committer_message: "Chore: Update metrics isocalendar"
       
+
       #Another Action
